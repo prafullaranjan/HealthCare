@@ -1,0 +1,25 @@
+@import "src/assets/scss/mixvars/variables";
+@import "src/assets/scss/mixvars/mixins";
+ul.icon-list {
+  @include listIcon(1, 10px 0 0 40px, url('/assets/img/1.svg'), 9px);
+}
+.text-black {
+  color: #000;
+}
+.form-floating {
+  label {
+    padding-left: 0;
+  }
+  .form-control {
+    border: 0;
+    border-bottom: $border-width solid #C2C2C2;
+    border-radius: 0;
+    padding-left: 0;
+  }
+  textarea {
+    min-height: 100px;
+    max-height: 100px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}

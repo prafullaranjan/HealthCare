@@ -1,0 +1,44 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+@mixin listIcon($count, $padding, $url, $top, $icon: false) {
+  margin: 0;
+  padding: 0;
+  column-count: $count;
+  li {
+    position: relative;
+    @if($icon) {
+      padding: 15px 0 15px 45px;
+    }
+    @else {
+      padding: $padding;
+    }
+    &::before {
+      content: '';
+      background-image: $url;
+      background-repeat: no-repeat;
+      position: absolute;
+      @if($icon) {
+        top: 9px;
+      }@else {
+        top: $top;
+      }
+      left: 0;
+      width: 40px;
+      height: 100%;
+      @include media-breakpoint-down(md) {
+        @if($icon) {
+          top: 12px;
+        }@else {
+          top: $top;
+        }
+      }
+    }
+  }
+}
+@mixin vcenter() {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}

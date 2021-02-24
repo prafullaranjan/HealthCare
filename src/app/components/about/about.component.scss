@@ -1,0 +1,4 @@
+@import "src/assets/scss/mixvars/mixins";
+ul.icon-list {
+  @include listIcon(2, false, url('/assets/img/check.png'), 9px, $icon: true);
+}

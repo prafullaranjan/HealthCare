@@ -1,0 +1,31 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+.homepage {
+  .card-title {
+    font-size: 44px;
+    @include media-breakpoint-down(xl) {
+      font-size: 30px;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: 25px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 35px;
+    }
+  }
+  .card-text {
+    max-width: 90%;
+    font-size: 18px;
+    margin: 25px 0 10px;
+    @include media-breakpoint-down(xl) {
+      max-width: 100%;
+    }
+  }
+}
+.play-icon {
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
